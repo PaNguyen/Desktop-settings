@@ -121,16 +121,27 @@
 ;; select window by direction
 ;;(when (fboundp 'windmove-default-keybindings)
 ;;(windmove-default-keybindings))
-(global-set-key (kbd "M-N") 'windmove-down)
-(global-set-key (kbd "M-P") 'windmove-up)
-(global-set-key (kbd "M-B") 'windmove-left)
-(global-set-key (kbd "M-F") 'windmove-right)
+(add-to-list 'load-path "~/.emacs.d/site-lisp/")
+(require 'framemove)
+(global-set-key (kbd "C-M-N") 'windmove-down)
+(global-set-key (kbd "C-M-P") 'windmove-up)
+(global-set-key (kbd "C-M-B") 'windmove-left)
+(global-set-key (kbd "C-M-F") 'windmove-right)
+(global-set-key (kbd "M-F") 'fm-right-frame)
+(global-set-key (kbd "M-N") 'fm-down-frame)
+(global-set-key (kbd "M-P") 'fm-up-frame)
+(global-set-key (kbd "M-B") 'fm-left-frame)
+(setq framemove-hook-into-windmove t)
 
 ;; tabs as spaces
 (setq-default indent-tabs-mode nil)
 
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(setq ace-jump-mode-submode-list
+      '(ace-jump-char-mode              ;; the first one always map to : C-c SPC
+        ace-jump-word-mode              ;; the second one always map to: C-u C-c SPC            
+        ace-jump-line-mode) )           ;; the third one always map to ：C-u C-u C-c SPC
 
 (setq doc-view-continuous t)
 
