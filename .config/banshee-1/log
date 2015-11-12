@@ -1,0 +1,97 @@
+exec -a banshee mono  /usr/lib/banshee/Banshee.exe    --redirect-log --play-enqueued
+
+[Info  17:36:19.883] Running Banshee 2.6.2: [Ubuntu 15.04 (linux-gnu, x86_64) @ 2015-06-04 03:02:29 UTC]
+[Info  17:36:20.601] Migrating album-art cache directory
+[Warn  17:36:20.604] Caught an exception - Hyena.Data.Sqlite.SqliteException: Sqlite error 1: no such table: CoverArtDownloads (SQL: DELETE FROM CoverArtDownloads) (in `Hyena.Data.Sqlite')
+  at Hyena.Data.Sqlite.Connection.CheckError (Int32 errorCode, System.String sql) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Sqlite.Connection.Execute (System.String sql) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Sqlite.HyenaSqliteCommand.Execute (Hyena.Data.Sqlite.HyenaSqliteConnection hconnection, Hyena.Data.Sqlite.Connection connection) [0x00000] in <filename unknown>:0 
+[Info  17:36:20.607] Migrated 0 files in 0.004405s
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkComponent) to class (__gtksharp_49_Hyena_Gui_BaseWidgetAccessible) after class_init
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkSelection) to class (__gtksharp_50_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_TrackInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkTable) to class (__gtksharp_50_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_TrackInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+[Warn  17:36:20.753] Initialization of accessibility support for ListView widgets failed - System.ArgumentException: Invalid signal name: model_changed (in `glib-sharp')
+  at GLib.Signal.Emit (GLib.Object instance, System.String detailed_signal, System.Object[] args) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.TrackInfo].EmitModelChanged () [0x00000] in <filename unknown>:0 
+  at Hyena.ThreadAssist.ProxyToMain (Hyena.InvokeHandler handler) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.TrackInfo].OnModelChanged (System.Object o, System.EventArgs a) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.TrackInfo]..ctor (GLib.Object widget) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.ListViewAccessibleFactory`1[Banshee.Collection.TrackInfo].Init () [0x00000] in <filename unknown>:0 
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkSelection) to class (__gtksharp_55_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_Database_QueryFilterInfo+601+5b+5bSystem_String+2c+20mscorlib+2c+20Version+3d4_0_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3db77a5c561934e089+5d+5d+2c+20Banshee_Services+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkTable) to class (__gtksharp_55_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_Database_QueryFilterInfo+601+5b+5bSystem_String+2c+20mscorlib+2c+20Version+3d4_0_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3db77a5c561934e089+5d+5d+2c+20Banshee_Services+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+[Warn  17:36:20.773] Initialization of accessibility support for ListView widgets failed - System.ArgumentException: Invalid signal name: model_changed (in `glib-sharp')
+  at GLib.Signal.Emit (GLib.Object instance, System.String detailed_signal, System.Object[] args) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.Database.QueryFilterInfo`1[System.String]].EmitModelChanged () [0x00000] in <filename unknown>:0 
+  at Hyena.ThreadAssist.ProxyToMain (Hyena.InvokeHandler handler) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.Database.QueryFilterInfo`1[System.String]].OnModelChanged (System.Object o, System.EventArgs a) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.Database.QueryFilterInfo`1[System.String]]..ctor (GLib.Object widget) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.ListViewAccessibleFactory`1[Banshee.Collection.Database.QueryFilterInfo`1[System.String]].Init () [0x00000] in <filename unknown>:0 
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkSelection) to class (__gtksharp_60_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_ArtistInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkTable) to class (__gtksharp_60_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_ArtistInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+[Warn  17:36:20.779] Initialization of accessibility support for ListView widgets failed - System.ArgumentException: Invalid signal name: model_changed (in `glib-sharp')
+  at GLib.Signal.Emit (GLib.Object instance, System.String detailed_signal, System.Object[] args) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.ArtistInfo].EmitModelChanged () [0x00000] in <filename unknown>:0 
+  at Hyena.ThreadAssist.ProxyToMain (Hyena.InvokeHandler handler) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.ArtistInfo].OnModelChanged (System.Object o, System.EventArgs a) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.ArtistInfo]..ctor (GLib.Object widget) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.ListViewAccessibleFactory`1[Banshee.Collection.ArtistInfo].Init () [0x00000] in <filename unknown>:0 
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkSelection) to class (__gtksharp_65_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_YearInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkTable) to class (__gtksharp_65_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_YearInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+[Warn  17:36:20.781] Initialization of accessibility support for ListView widgets failed - System.ArgumentException: Invalid signal name: model_changed (in `glib-sharp')
+  at GLib.Signal.Emit (GLib.Object instance, System.String detailed_signal, System.Object[] args) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.YearInfo].EmitModelChanged () [0x00000] in <filename unknown>:0 
+  at Hyena.ThreadAssist.ProxyToMain (Hyena.InvokeHandler handler) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.YearInfo].OnModelChanged (System.Object o, System.EventArgs a) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.YearInfo]..ctor (GLib.Object widget) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.ListViewAccessibleFactory`1[Banshee.Collection.YearInfo].Init () [0x00000] in <filename unknown>:0 
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkSelection) to class (__gtksharp_70_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_AlbumInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+
+(Banshee:20875): GLib-GObject-WARNING **: attempting to add an interface (AtkTable) to class (__gtksharp_70_Hyena_Data_Gui_Accessibility_ListViewAccessible+601+5b+5bBanshee_Collection_AlbumInfo+2c+20Banshee_Core+2c+20Version+3d2_6_0_0+2c+20Culture+3dneutral+2c+20PublicKeyToken+3dnull+5d+5d) after class_init
+[Warn  17:36:20.783] Initialization of accessibility support for ListView widgets failed - System.ArgumentException: Invalid signal name: model_changed (in `glib-sharp')
+  at GLib.Signal.Emit (GLib.Object instance, System.String detailed_signal, System.Object[] args) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.AlbumInfo].EmitModelChanged () [0x00000] in <filename unknown>:0 
+  at Hyena.ThreadAssist.ProxyToMain (Hyena.InvokeHandler handler) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.AlbumInfo].OnModelChanged (System.Object o, System.EventArgs a) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.Accessibility.ListViewAccessible`1[Banshee.Collection.AlbumInfo]..ctor (GLib.Object widget) [0x00000] in <filename unknown>:0 
+  at Hyena.Data.Gui.ListViewAccessibleFactory`1[Banshee.Collection.AlbumInfo].Init () [0x00000] in <filename unknown>:0 
+[Info  17:36:21.013] Updating web proxy from GConf
+[Info  17:36:21.047] All services are started 0.669601
+[Warn  17:36:21.217] Error migrating Internet Radio Stations - System.IO.DirectoryNotFoundException: Directory '/home/patrick/.config/banshee/plugins/stations/user' not found. (in `mscorlib')
+  at System.IO.Directory.ValidateDirectoryListing (System.String path, System.String searchPattern, System.Boolean& stop) [0x00000] in <filename unknown>:0 
+  at System.IO.Directory.GetFileSystemEntries (System.String path, System.String searchPattern, FileAttributes mask, FileAttributes attrs) [0x00000] in <filename unknown>:0 
+  at System.IO.Directory.GetFiles (System.String path, System.String searchPattern) [0x00000] in <filename unknown>:0 
+  at Banshee.InternetRadio.XspfMigrator.Migrate () [0x00000] in <filename unknown>:0 
+[Info  17:36:21.225] AmazonMP3 store redirect URL: http://integrated-services.banshee.fm/amz/redirect.do/
+[Info  17:36:21.350] nereid Client Started
+[Info  17:36:21.394] GStreamer version 1.4.5.0, gapless: True, replaygain: False
+[Warn  17:37:03.634] Caught an exception - System.Net.WebException: Error: NameResolutionFailure (in `System')
+  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00000] in <filename unknown>:0 
+  at System.Net.HttpWebRequest.GetResponse () [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.GetHttpStream (System.Uri uri, System.String[] ignoreMimeTypes) [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.GetHttpStream (System.Uri uri) [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.Rhapsody.RhapsodyQueryJob.Run () [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.Run () [0x00000] in <filename unknown>:0 
+[Warn  17:37:29.283] Caught an exception - System.Net.WebException: Error: NameResolutionFailure (in `System')
+  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00000] in <filename unknown>:0 
+  at System.Net.HttpWebRequest.GetResponse () [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.GetHttpStream (System.Uri uri, System.String[] ignoreMimeTypes) [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.GetHttpStream (System.Uri uri) [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.Rhapsody.RhapsodyQueryJob.Run () [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.Run () [0x00000] in <filename unknown>:0 
+[Warn  17:37:31.271] Caught an exception - System.Net.WebException: Error: NameResolutionFailure (in `System')
+  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00000] in <filename unknown>:0 
+  at System.Net.HttpWebRequest.GetResponse () [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.GetHttpStream (System.Uri uri, System.String[] ignoreMimeTypes) [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.GetHttpStream (System.Uri uri) [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.Rhapsody.RhapsodyQueryJob.Run () [0x00000] in <filename unknown>:0 
+  at Banshee.Metadata.MetadataServiceJob.Run () [0x00000] in <filename unknown>:0 
