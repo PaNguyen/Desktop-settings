@@ -8,3 +8,4 @@ apt-get install compiz-plugins
 apt-get install banshee
 apt-get install gstreamer0.10-plugins
 apt-get install mpv
+apt-get install deluge
