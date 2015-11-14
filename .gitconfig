@@ -1,0 +1,7 @@
+[user]
+	email = pahdnguyen@gmail.com
+	name = Patrick
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
