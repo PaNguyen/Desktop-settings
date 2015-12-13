@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <15/11/07 19:34:15 /home/patrick/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/12/10 18:56:45 /home/patrick/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -58,24 +58,19 @@
   ("touch" "\\touch")
   ("ls" "/bin/ls --color=never"))
  (["ssh" "phn" "unix.andrew.cmu.edu" nil nil]
-  ("uname" "Linux 3.10.0-229.14.1.el7.x86_64")
+  ("uname" "Linux 3.10.0-327.el7.x86_64")
   ("test" "test")
   ("remote-path"
    ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
   ("locale" "LC_ALL=en_US.utf8")
   ("~" "/afs/andrew.cmu.edu/usr24/phn")
+  ("readlink" "\\readlink")
   ("stat" "\\stat")
   ("file-exists" "test -e")
   ("id" "/usr/bin/id")
+  ("gid-integer" 100)
   ("gid-string" "users")
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  ("gid-integer" 100)
-  ("readlink" "\\readlink")
-  ("uid-integer" 2603399)
-  ("tmpdir" "/ssh:phn@unix.andrew.cmu.edu:/tmp")
-  ("touch-t" t)
-  ("touch" "\\touch")
-  ("ls" "/usr/bin/ls --color=never")))
+  ("perl" "\\perl")))

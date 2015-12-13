@@ -2,84 +2,18 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Thu Nov 12 02:58:45 2015
+;; Created Fri Dec 11 04:20:02 2015
 ;; Desktop file format version 206
 ;; Emacs version 24.4.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22084 18101 613076 308000) (desktop . "206") "patrick@navi" nil nil ((((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (font-parameter . "DejaVu Sans Mono-10.5") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#F8F8F8") (background-color . "#0C1021") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#FFFFFF") (sticky) (environment) (frameset--id . "751C-15BC-038D-C97D") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (height . 62) (width . 232) (left . 47) (top . 24)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 68) (min-pixel-width . 160) (min-pixel-height-ignore . 51) (min-pixel-width-ignore . 64) (min-pixel-height-safe . 17) (min-pixel-width-safe . 32)) hc (pixel-width . 1873) (pixel-height . 1039) (total-width . 234) (total-height . 61) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 937) (pixel-height . 1039) (total-width . 117) (total-height . 61) (normal-height . 1.0) (normal-width . 0.5) (buffer ".emacs" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 4664) (start . 3325))) (leaf (last . t) (pixel-width . 936) (pixel-height . 1039) (total-width . 117) (total-height . 61) (normal-height . 1.0) (normal-width . 0.5) (buffer ".bashrc" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 348) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (22122 38210 6790 57000) (desktop . "206") "patrick@navi" nil nil ((((font-backend xft x) (font . "-unknown-DejaVu Sans Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") (font-parameter . "DejaVu Sans Mono-10.5") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#F8F8F8") (background-color . "#0C1021") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#FFFFFF") (sticky) (environment) (frameset--id . "D998-0E63-E25B-19B0") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (height . 62) (width . 232) (left . 47) (top . 24)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 68) (min-pixel-width . 160) (min-pixel-height-ignore . 51) (min-pixel-width-ignore . 64) (min-pixel-height-safe . 17) (min-pixel-width-safe . 32)) hc (pixel-width . 1873) (pixel-height . 1039) (total-width . 234) (total-height . 61) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 936) (pixel-height . 1039) (total-width . 117) (total-height . 61) (normal-height . 1.0) (normal-width . 0.49864498644986455) (buffer "*scratch*" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 937) (pixel-height . 1039) (total-width . 117) (total-height . 61) (normal-height . 1.0) (normal-width . 0.5013550135501355) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("ace" "kbd" "site" "site-" "tutch" "framemove" "windmo" "\\cong" "alloc" "typeSize" "alloc" "getDecls" "getDec" "--X" "genExp" "regallocM"))
+(setq search-ring '("MEM" "typ" "inorder" "spw" "is_tra" "is_traversed" "gen" "gener" "generi" "AGE" "GROW" "spawn" "TEST" "or in other words" "TODO" "}"))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("~/.bashrc" "~/.emacs.d/elpa/ace-jump-mode-20140616.115/ace-jump-mode.el" "~/.emacs" "~/Documents/Fall 2015/80310/assn9/assn9.tex" "~/setup.sh" "~/Documents/Fall 2015/80310/assn9/assn9.tex" "~/Documents/Fall 2015/80310/hw-template.tex" "~/Desktop/compiler-design/tests2/meowth-growl.l4" "~/Desktop/compiler-design/tests0/mmult.l4" "~/Desktop/compiler-design/tests0/mmult2.l4" "~/Desktop/compiler-design/compiler/tmp.so" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/compiler/src/Compile/Types/Ops.hs" "~/Desktop/compiler-design/tests2/abra-error_array_deref01.l4" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/tests2/pidgey-exception05.l4" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/compiler/src/Compile/Types/Exp.hs" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/tests2/pidgey-exception05.l4" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/compiler/tttt" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/compiler/src/Compile/MiddleEnd/CodeGen.hs" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/compiler/src/Compile/BackEnd/BackEnd.hs" "~/Desktop/compiler-design/compiler/tmp.aso" "~/Desktop/compiler-design/compiler/src/Compile/Types/AST.hs" "~/Desktop/compiler-design/compiler/src/Compile/Types/AbstractAssembly.hs" "/ssh:phn@unix.andrew.cmu.edu:/afs/andrew.cmu.edu/usr24/phn/private/15210-f15/labs/bridgelab/src/rubric.txt"))
+(setq file-name-history '("~/Desktop/compiler-design/compiler/README" "~/Desktop/compiler-design/tests/README" "~/Desktop/compiler-design/compiler/Makefile" "~/Desktop/compiler-design/tests/README" "~/Desktop/compiler-design/compiler/Makefile" "~/Desktop/compiler-design/compiler/gc/gc.c" "~/Desktop/compiler-design/compiler/Makefile" "~/Desktop/compiler-design/tests_gc/inter_1.l4" "~/Desktop/compiler-design/tests_gc_c/inter_0.c" "~/Desktop/compiler-design/tests_gc/inter_0.l4" "~/Desktop/compiler-design/tests_gc_c/inter1_1.c" "~/Desktop/compiler-design/tests_gc/inter1_1.l4" "~/Desktop/compiler-design/tests_gc_c/inter1_1.c" "~/Desktop/compiler-design/tests_gc_c/inter_2.c" "~/Desktop/compiler-design/tests_gc_c/inter_1.c" "~/Desktop/compiler-design/tests_gc/inter_2.l4" "/ssh:phn@unix.andrew.cmu.edu:/afs/andrew.cmu.edu/usr24/phn/private/15317/hw10.pdf" "/ssh:phn@unix.andrew.cmu.edu:.bashrc" "~/Desktop/compiler-design/tests_gc_c/inter_1.c" "~/Desktop/compiler-design/tests_gc/inter_1.l4" "~/Desktop/compiler-design/tests_gc_c/inter2.c" "~/Desktop/compiler-design/tests_gc/inter_1.l4" "~/Desktop/compiler-design/tests_gc_c/xalloc.c" "~/Desktop/compiler-design/tests_gc_c/inter2.c" "~/Desktop/compiler-design/tests_gc/inter2.l4" "~/Desktop/compiler-design/tests_gc/inter.l4" "~/Desktop/compiler-design/tests1/nickel-struct_test02.l4" "~/Desktop/compiler-design/tests1/rattata-the-odds-are-stacked-against-you.l4" "~/Desktop/compiler-design/tests_gc_c/inter.c" "~/Desktop/compiler-design/tests_gc/mergesort.l4"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
-(desktop-create-buffer 206
-  "/home/patrick/.bashrc"
-  ".bashrc"
-  'sh-mode
-  '(linum-mode TeX-PDF-mode)
-  348
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/patrick/.emacs"
-  ".emacs"
-  'emacs-lisp-mode
-  '(linum-mode TeX-PDF-mode)
-  4664
-  '(4664 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/patrick/Documents/Fall 2015/80310/assn9/assn9.pdf"
-  "assn9.pdf"
-  'doc-view-mode
-  '(linum-mode TeX-PDF-mode)
-  1
-  '(nil nil)
-  t
-  '((page . 1) (slice))
-  '((buffer-file-coding-system . no-conversion)))
-
-(desktop-create-buffer 206
-  "/home/patrick/.emacs.d/elpa/ace-jump-mode-20140616.115/ace-jump-mode.el"
-  "ace-jump-mode.el"
-  'emacs-lisp-mode
-  '(linum-mode TeX-PDF-mode)
-  2956
-  '(1 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/patrick/Documents/Fall 2015/80310/assn9/assn9.tex"
-  "assn9.tex"
-  'latex-mode
-  '(linum-mode TeX-PDF-mode)
-  6306
-  '(5477 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
-
-(desktop-create-buffer 206
-  "/home/patrick/setup.sh"
-  "setup.sh"
-  'sh-mode
-  '(linum-mode TeX-PDF-mode)
-  131
-  '(85 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
