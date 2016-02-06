@@ -22,7 +22,7 @@
 (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10.5" ))
 
 ;; save buffers after exiting
-(desktop-save-mode 1)
+;;(desktop-save-mode 1)
 
 ;; remove UI stuff
 (tool-bar-mode -1)
@@ -74,17 +74,18 @@
 ;;                        (concat "export PS1=\"\033[33m" name "\033[0m:\033[35m\\W\033[0m>\""))))
 
 ;; remote shell
-;;(defun anr-shell (buffer)
-;;  "Opens a new shell buffer where the given buffer is located."
-;;  (interactive "sBuffer: ")
-;;  (pop-to-buffer (concat "*" buffer "*"))
-;;  (unless (eq major-mode 'shell-mode)
-;;    (dired buffer)
-;;    (shell buffer)
-;;    (sleep-for 0 200)
-;;    (delete-region (point-min) (point-max))
-;;    (comint-simple-send (get-buffer-process (current-buffer)) 
-;;                        (concat "export PS1=\"\033[33m" buffer "\033[0m:\033[35m\\W\033[0m>\""))))
+(defun anr-shell (buffer)
+  "Opens a new shell buffer where the given buffer is located."
+  (interactive "sBuffer: ")
+  (pop-to-buffer (concat "*" buffer "*"))
+  (unless (eq major-mode 'shell-mode)
+    (dired buffer)
+    (shell buffer)
+    (sleep-for 0 200)
+    (delete-region (point-min) (point-max))
+    (comint-simple-send (get-buffer-process (current-buffer)) 
+                        (concat "export PS1=\"\033[33m" buffer "\033[0m:\033[35m\\W\033[0m>\""))))
+(global-set-key (kbd "C-c C-u s") 'anr-shell) 
 
 (defun new-shell ()
   (interactive)
@@ -102,10 +103,10 @@
 
 (global-set-key (kbd "C-c s") 'new-shell)
 
-(defun afs ()
-    (interactive)
-    (let ((default-directory "/ssh:phn@unix.andrew.cmu.edu:"))
-      (shell)))
+;;(defun afs ()
+;;    (interactive)
+;;    (let ((default-directory "/ssh:phn@unix.andrew.cmu.edu:"))
+;;      (shell)))
 
 ;; interpret and use ansi color codes in shell output windows
 (setq ansi-color-names-vector ["dark red" "red" "saddle brown" "yellow" "deep sky blue" "magenta" "cyan" "tan"])
@@ -163,6 +164,30 @@
 
 ;; kills to beginning of line
 (global-set-key "\M-k" '(lambda () (interactive) (kill-line 0)) ) ;M-k kills to the left
+
+;; C-h for backspace
+;;(global-set-key "\C-h" 'backward-delete-char-untabify)
+;;(define-key isearch-mode-map "\C-h" 'isearch-delete-char)
+;;(global-set-key [(hyper h)] 'help-command)
+
+;; C-h for goto-line
+(global-set-key "\C-h" 'goto-line)
+
+;; C-' for line or region comment toggle
+(defun comment-or-uncomment-line-or-region ()
+  "Comments or uncomments the current line or region."
+  (interactive)
+  (if (region-active-p)
+      (comment-or-uncomment-region (region-beginning) (region-end))
+    (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+    )
+  )
+(global-set-key (kbd "C-'") 'comment-or-uncomment-line-or-region)
+
+;; stop getting process killed confirmations, just kill them
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
 
 ;; sml
 (autoload 'sml-mode "sml-mode" "Major mode for editing SML." t)
