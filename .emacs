@@ -133,8 +133,10 @@
 (global-set-key (kbd "C-M-P") 'fm-up-frame)
 (global-set-key (kbd "C-M-B") 'fm-left-frame)
 (global-set-key (kbd "C-o") 'other-frame)
+
 ;; tabs as spaces
 (setq-default indent-tabs-mode nil)
+(setq tab-width 2)
 
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
@@ -249,3 +251,6 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 (load "tutch-mode.el")
 (require 'tutch-mode)
+
+;;C
+(c-set-offset (quote cpp-macro) 0 nil)
