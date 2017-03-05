@@ -13,3 +13,4 @@ apt-get install gstreamer0.10-plugins
 apt-get install mpv
 apt-get install deluge
 apt-get install krita  #image modifying software
+apt-get install thefuck

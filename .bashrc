@@ -116,6 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+eval `opam config env`
+
 alias osu='cd $HOME/Desktop/osu\! && WINEPREFIX="$HOME/Wine Prefixes/osu!" wine "osu!.exe"'
 alias osumania='cd $HOME/Desktop/osumania && WINEPREFIX="$HOME/Wine Prefixes/osu!" wine "osu!.exe"'
 alias smlnj='rlwrap sml'

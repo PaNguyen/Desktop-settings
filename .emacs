@@ -103,10 +103,10 @@
 
 (global-set-key (kbd "C-c s") 'new-shell)
 
-;;(defun afs ()
-;;    (interactive)
-;;    (let ((default-directory "/ssh:phn@unix.andrew.cmu.edu:"))
-;;      (shell)))
+(defun afs ()
+   (interactive)
+   (let ((default-directory "/ssh:phn@unix.andrew.cmu.edu:"))
+     (shell)))
 
 ;; interpret and use ansi color codes in shell output windows
 (setq ansi-color-names-vector ["dark red" "red" "saddle brown" "yellow" "deep sky blue" "magenta" "cyan" "tan"])
@@ -123,16 +123,21 @@
 ;;(when (fboundp 'windmove-default-keybindings)
 ;;(windmove-default-keybindings))
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
+(add-to-list 'load-path "~/share/emacs/site-lisp/");
 (require 'framemove)
 (global-set-key (kbd "M-N") 'windmove-down)
 (global-set-key (kbd "M-P") 'windmove-up)
 (global-set-key (kbd "M-B") 'windmove-left)
 (global-set-key (kbd "M-F") 'windmove-right)
-(global-set-key (kbd "C-M-F") 'fm-right-frame)
-(global-set-key (kbd "C-M-N") 'fm-down-frame)
-(global-set-key (kbd "C-M-P") 'fm-up-frame)
-(global-set-key (kbd "C-M-B") 'fm-left-frame)
+;; (global-set-key (kbd "C-M-F") 'fm-right-frame)
+;; (global-set-key (kbd "C-M-N") 'fm-down-frame)
+;; (global-set-key (kbd "C-M-P") 'fm-up-frame)
+;; (global-set-key (kbd "C-M-B") 'fm-left-frame)
 (global-set-key (kbd "C-o") 'other-frame)
+
+(global-set-key (kbd "C-M-f") 'forward-list)
+(global-set-key (kbd "C-M-b") 'backward-list)
+
 
 ;; tabs as spaces
 (setq-default indent-tabs-mode nil)
@@ -140,10 +145,10 @@
 
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-(setq ace-jump-mode-submode-list
-      '(ace-jump-char-mode              ;; the first one always map to : C-c SPC
-        ace-jump-word-mode              ;; the second one always map to: C-u C-c SPC            
-        ace-jump-line-mode) )           ;; the third one always map to ：C-u C-u C-c SPC
+;; (setq ace-jump-mode-submode-list
+;;       '(ace-jump-char-mode              ;; the first one always map to : C-c SPC
+;;         ace-jump-word-mode              ;; the second one always map to: C-u C-c SPC            
+;;         ace-jump-line-mode) )           ;; the third one always map to ：C-u C-u C-c SPC
 
 (setq doc-view-continuous t)
 
@@ -173,7 +178,7 @@
 ;;(global-set-key [(hyper h)] 'help-command)
 
 ;; C-h for goto-line
-(global-set-key "\C-h" 'goto-line)
+;; (global-set-key "\C-h" 'goto-line)
 
 ;; C-' for line or region comment toggle
 (defun comment-or-uncomment-line-or-region ()
@@ -189,7 +194,75 @@
 ;; stop getting process killed confirmations, just kill them
 (setq kill-buffer-query-functions
   (remq 'process-kill-buffer-query-function
-         kill-buffer-query-functions))
+        kill-buffer-query-functions))
+
+;; kill whole line with M-k
+(global-set-key "\M-k" 'kill-whole-line)
+
+;; start server for emacsclient
+;; (server-start)
+
+;; backup files in temp directory
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+;; purge week old temp files
+(message "Deleting old backup files...")
+(let ((week (* 60 60 24 7))
+      (current (float-time (current-time))))
+  (dolist (file (directory-files temporary-file-directory t))
+    (when (and (backup-file-name-p file)
+               (> (- current (float-time (fifth (file-attributes file))))
+                  week))
+      (message "%s" file)
+      (delete-file file))))
+
+;; pdf-tools
+;; has some dependencies: see https://github.com/politza/pdf-tools
+(add-to-list 'load-path "~/.emacs.d/tablist")
+(pdf-tools-install)
+
+;; (add-to-list 'load-path "~/.emacs.d/emacs-ctable")
+;; (add-to-list 'load-path "~/.emacs.d/emacs-deferred")
+;; (add-to-list 'load-path "~/.emacs.d/emacs-epc")
+;; (add-to-list 'load-path "~/.emacs.d/emacs-webkit")
+;; (require 'webkit)
+
+;;; xwidget stuff
+;; (require 'xwidget)
+;; ;; make these keys behave like normal browser
+;; (define-key xwidget-webkit-mode-map [mouse-4] 'xwidget-webkit-scroll-down)
+;; (define-key xwidget-webkit-mode-map [mouse-5] 'xwidget-webkit-scroll-up)
+;; (define-key xwidget-webkit-mode-map (kbd "<up>") 'xwidget-webkit-scroll-down)
+;; (define-key xwidget-webkit-mode-map (kbd "<down>") 'xwidget-webkit-scroll-up)
+;; (define-key xwidget-webkit-mode-map (kbd "M-w") 'xwidget-webkit-copy-selection-as-kill)
+;; (define-key xwidget-webkit-mode-map (kbd "C-c") 'xwidget-webkit-copy-selection-as-kill)
+
+;; adapt webkit according to window configuration chagne automatically
+;; without this hook, every time you change your window configuration,
+;; you must press 'a' to adapt webkit content to new window size
+;; (add-hook 'window-configuration-change-hook (lambda ()
+;;                (when (equal major-mode 'xwidget-webkit-mode)
+;;                  (xwidget-webkit-adjust-size-dispatch))))
+
+;; by default, xwidget reuses previous xwidget window,
+;; thus overriding your current website, unless a prefix argument
+;; is supplied
+;;
+;; This function always opens a new website in a new window
+;; (defun xwidget-browse-url-no-reuse (url &optional sessoin)
+;;   (interactive (progn
+;;                  (require 'browse-url)
+;;                  (browse-url-interactive-arg "xwidget-webkit URL: "
+;;                                              )))
+;;   (xwidget-webkit-browse-url url t))
+
+;; ;; make xwidget default browser
+;; (setq browse-url-browser-function (lambda (url session)
+;;                     (other-window 1)
+;;                     (xwidget-browse-url-no-reuse url)))
+;;;
 
 ;; sml
 (autoload 'sml-mode "sml-mode" "Major mode for editing SML." t)
@@ -211,6 +284,10 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq-default TeX-PDF-mode t)
+(setq-default TeX-engine 'xetex)
+;; spellcheck
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+
 
 ;;haskell
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
@@ -254,3 +331,28 @@
 
 ;;C
 (c-set-offset (quote cpp-macro) 0 nil)
+;;doxygen
+(require 'doxymacs)
+(add-hook 'c-mode-common-hook'doxymacs-mode)
+(defun my-doxymacs-font-lock-hook ()
+    (if (or (eq major-mode 'c-mode) (eq major-mode 'c++-mode))
+        (doxymacs-font-lock)))
+(add-hook 'font-lock-mode-hook 'my-doxymacs-font-lock-hook)
+
+
+;;ocaml
+;; Add the opam lisp dir to the emacs load path
+(add-to-list
+ 'load-path
+ (replace-regexp-in-string
+  "\n" "/share/emacs/site-lisp"
+  (shell-command-to-string "opam config var prefix")))
+
+;; Automatically load utop.el
+(autoload 'utop "utop" "Toplevel for OCaml" t)
+
+;; Use the opam installed utop
+(setq utop-command "opam config exec -- utop -emacs")
+
+(load "~/.emacs.d/tuareg/tuareg-site-file")
+(setq tuareg-indent-align-with-first-arg nil)
